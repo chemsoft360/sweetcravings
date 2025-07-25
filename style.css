@@ -1,0 +1,114 @@
+
+/* Apply Flexbox layout to the whole page */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    background: #d6336c;
+    color: white;
+    padding: 1em 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.navbar a {
+    color: white;
+    margin: 0 1em;
+    text-decoration: none;
+    font-weight: bold;
+    transition: opacity 0.3s ease;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    opacity: 0.7;
+}
+
+.hero {
+    text-align: center;
+    background: #ffdeeb;
+    padding: 4em 2em;
+}
+
+.hero h1 {
+    font-size: 2.8em;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-top: 0.5em;
+}
+
+.featured {
+    padding: 2em;
+    text-align: center;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.gallery img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+.content {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+    flex: 1;
+    padding: 20px;
+}
+
+.menu-list {
+    list-style: none;
+    padding: 0;
+    font-size: 1.1em;
+}
+
+.menu-list li {
+    margin: 0.8em 0;
+}
+
+.footer {
+    text-align: center;
+    padding: 1em 0;
+    background: #f8f9fa;
+    margin-top: 2em;
+    font-size: 0.9em;
+    color: #666;
+}
+
+.fade-in {
+    animation: fadeIn 1.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
